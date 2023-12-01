@@ -1,4 +1,4 @@
-const URL = `https://coffee.alexflipnote.dev/zOhZmZ5R3Yw_coffee.jpg`;
+const URL = `https://api.dictionaryapi.dev/api/v2/entries/en/`;
 
 async function getData(URL) {
 
@@ -13,6 +13,7 @@ async function getData(URL) {
         const data = await response.json();
         document.querySelector("h1").textContent = data.content;
         console.log(data.content);
+        console.log("working");
 
     } catch (error) {
         console.log("oopai, error meh");
