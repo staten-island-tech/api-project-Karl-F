@@ -1,4 +1,4 @@
-/* const URL = `https://animechan.xyz/api/random`;
+const URL = `https://picsum.photos/200`;
 
 async function getData(URL) {
 
@@ -21,10 +21,10 @@ async function getData(URL) {
     }
 }
 
-getData(URL); */
+getData(URL); 
 
 
-const picture = "https://picsum.photos/200"
+/* const picture = "https://picsum.photos/200"
 async function getImg(picture) {
 
     try {
@@ -46,7 +46,9 @@ async function getImg(picture) {
     }
 }
 
-getImg(picture);
+getImg(picture); */
+
+
 
 /* function insertCard() {
     document.querySelector(".cards").insertAdjacentHTML(
