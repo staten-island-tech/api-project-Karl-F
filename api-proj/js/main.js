@@ -40,14 +40,16 @@ async function getData(URL) {
         if (response.status != 200) {
             throw new Error(response.statusText);
         }
-        const data = await response.json();
-        document.querySelector(".cards").textContent = data.memes;
-        console.log(data.data.memes); 
-        console.log(data);
-        /* test.forEach((test) => test.insertAdjacentHTML( "beforeend",
+        const grab = await response.json();
+        document.querySelector(".cards").textContent = grab.data;
+        console.log(grab.data.memes);
+        console.log(grab);
+
+        /* let test = test.filter(image)
+        forEach((test) => test.insertAdjacentHTML( "beforeend",
         `
         <div class="card">
-        <img src="${url}" alt=""><br>
+        <img src="${data.url}" alt=""><br>
         <button class="btn">Click</button>
         </div>
         `
@@ -56,7 +58,7 @@ async function getData(URL) {
     } catch (error) {
         console.log("oopai, error meh");
         document.querySelector(".cards").textContent = "Your subscription go bye bye";
-    }
-}
+    };
+};
 
 getData(URL);
