@@ -32,7 +32,7 @@ async function getData(URL) {
 getData(URL);  */
 
 
-import "../styles/style.css" 
+import "../styles/style.css"
 
 const URL = `https://api.imgflip.com/get_memes`;
 
@@ -44,19 +44,31 @@ async function getData(URL) {
             throw new Error(response.statusText);
         }
         const grab = await response.json();
-        document.querySelector(".cards").textContent = grab.data;
+        const arrData = grab.data;
 
-/*         grab.data.memes.forEach((meme) => meme.insertAdjacentHTML("beforeend",
+        /* document.querySelector(".cards").textContent = arrData.memes.forEach((meme) => meme.insertAdjacentHTML("beforeend",
         `
         <div class="card">
-        <img src="${data.url}" alt=""><br>
-        <button class="btn">Click</button>
+        <img src="${meme.url}" alt=""><br>
         </div>
         `
-        ));
- */
-        grab.data.memes.forEach((meme) => console.log(meme));
+        ));;
+        console.log(grab); */
+
+        arrData.memes.forEach((meme) => console.log(meme));
         console.log(grab);
+
+        function insertmeme() {
+            document.querySelector(".cards")
+            arrData.memes.forEach((meme) => meme.insertAdjacentHTML("beforeend",
+            `
+            <div class="card">
+            <img src="${meme.url}" alt=""><br>
+            </div>
+            `
+            ))
+        }
+        insertmeme();
 
     } catch (error) {
         console.log("oopai, error meh");
