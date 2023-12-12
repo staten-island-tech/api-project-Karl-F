@@ -58,9 +58,10 @@ async function getData(URL) {
         arrData.memes.forEach((meme) => console.log(meme));
         console.log(grab);
 
-        function insertmeme() {
-            document.querySelector(".cards")
-            arrData.memes.forEach((meme) => meme.insertAdjacentHTML("beforeend",
+        async function insertmeme() {
+            const add = document.querySelector(".cards");
+            document.body.appendChild(add);
+            arrData.meme.forEach((meme) => meme.insertAdjacentHTML("beforeend",
             `
             <div class="card">
             <img src="${meme.url}" alt=""><br>
