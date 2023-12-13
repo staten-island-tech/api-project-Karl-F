@@ -33,6 +33,7 @@ getData(URL);  */
 
 
 import "../styles/style.css"
+import { DOMSelectors } from "./dom";
 
 const URL = `https://api.imgflip.com/get_memes`;
 
@@ -55,22 +56,28 @@ async function getData(URL) {
         ));;
         console.log(grab); */
 
+
         arrData.memes.forEach((meme) => console.log(meme));
         console.log(grab);
 
-        async function insertmeme() {
-            const add = document.querySelector(".cards");
-            document.body.appendChild(add);
-            arrData.meme.forEach((meme) => meme.insertAdjacentHTML("beforeend",
+         { 
+            function insertmeme(add) {
+            document.querySelector(".cards").insertAdjacentHTML("beforeend",
             `
             <div class="card">
+            <h2>${meme.name}</h2>
             <img src="${meme.url}" alt=""><br>
             </div>
             `
-            ))
+            );
         }
         insertmeme();
+        
+        add.forEach((result) => {
+            insertmeme(result);
+        })
 
+        }
     } catch (error) {
         console.log("oopai, error meh");
         document.querySelector(".cards").textContent = "Your subscription go bye bye";
