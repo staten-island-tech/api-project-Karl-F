@@ -47,22 +47,9 @@ async function getData(URL) {
         const grab = await response.json();
         const arrData = grab.data;
 
-        /* document.querySelector(".cards").textContent = arrData.memes.forEach((meme) => meme.insertAdjacentHTML("beforeend",
-        `
-        <div class="card">
-        <img src="${meme.url}" alt=""><br>
-        </div>
-        `
-        ));;
-        console.log(grab); */
-
-
-        arrData.memes.forEach((meme) => console.log(meme));
         console.log(grab);
 
-         { 
             function insertmeme() {
-
             arrData.memes.forEach((meme) => document.querySelector(".cards").insertAdjacentHTML("beforeend",
             `
             <div class="card">
@@ -72,12 +59,8 @@ async function getData(URL) {
             `
             ));
         }
-        
-        add.forEach((result) => {
-            insertmeme(result);
-        })
+        insertmeme();
 
-        }
     } catch (error) {
         console.log("oopai, error meh");
         document.querySelector(".cards").textContent = "Your subscription go bye bye";
