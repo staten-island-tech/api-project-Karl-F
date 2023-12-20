@@ -37,7 +37,6 @@ import { DOMSelectors } from "./dom";
 
 const URL = `https://api.imgflip.com/get_memes`;
 
-
 async function getData(URL) {
     try {
         const response = await fetch(URL);
@@ -54,7 +53,7 @@ async function getData(URL) {
             `
             <div class="card">
             <h2>${meme.name}</h2>
-            <img src="${meme.url}" alt="${meme.name}"><br>
+            <img class = "image" src="${meme.url}" alt="${meme.name}"><br>
             </div>
             `
             ));
@@ -67,3 +66,7 @@ async function getData(URL) {
     };
 };
 getData(URL);
+
+const captionURL = `https://api.imgflip.com/caption_image`;
+
+
