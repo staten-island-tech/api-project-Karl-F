@@ -59,7 +59,11 @@ async function getData(URL) {
             ));
         }
         insertmeme();
-
+/* 
+        const memeNum = arrData.memes.filter((meme) => meme.id < 200000); 
+        const countMeme = memeNum.id.length;
+        console.log (`meme set: ${countMeme}`);
+ */
     } catch (error) {
         console.log("oopai, error meh");
         document.querySelector(".cards").textContent = "Your subscription go bye bye";
@@ -67,6 +71,8 @@ async function getData(URL) {
 };
 getData(URL);
 
-const captionURL = `https://api.imgflip.com/caption_image`;
 
+
+/* const captionURL = `https://api.imgflip.com/caption_image`;
+ */
 
