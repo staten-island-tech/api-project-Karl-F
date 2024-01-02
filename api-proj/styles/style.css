@@ -4,7 +4,12 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: brown;
+  background-color: brown; 
+  font-size: 15px;
+}
+
+h1 {
+  color: white;
 }
 
 .cards {
@@ -21,6 +26,7 @@ body {
   text-align: center;
   flex-basis: 20%;
   background-color: blue;
+  color: orange;
 }
 
 .image {
