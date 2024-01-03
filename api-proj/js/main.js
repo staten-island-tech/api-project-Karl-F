@@ -52,7 +52,7 @@ async function getData(URL) {
             arrData.memes.forEach((meme) => document.querySelector(".cards").insertAdjacentHTML("beforeend",
             `
             <div class="card">
-            <h2>${meme.name}</h2>
+            <h2 class = "description">${meme.name}</h2>
             <img class = "image" src="${meme.url}" alt="${meme.name}"><br>
             </div>
             `
@@ -68,5 +68,6 @@ async function getData(URL) {
 getData(URL);
 
 const captionURL = `https://api.imgflip.com/caption_image`;
+
 
 
