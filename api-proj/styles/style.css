@@ -1,10 +1,13 @@
 html,
 body {
   margin: 0;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-  background-color: brown;
+  align-items: center;
+  background-color: brown; 
+  font-size: 15px;
+}
+
+h1 {
+  color: white;
 }
 
 .cards {
@@ -20,7 +23,13 @@ body {
   padding: 15px;
   text-align: center;
   flex-basis: 20%;
-  background-color: blue;
+  color: orange;
+  animation: card-animation 5s  infinite ease-in-out;
+}
+
+.description {
+  font-size: 2rem;
+  color: black;
 }
 
 .image {
@@ -29,3 +38,37 @@ body {
   min-width: 300px;
   min-height: 300px;
 }
+
+@keyframes card-animation {
+  0% {
+  opacity: 100%;
+  background-color: red;
+  }
+  25% {
+  opacity: 75%;
+  background-color: orange; 
+  }
+  50% {
+  opacity: 75%;
+  background-color: rgb(255, 0, 0);
+  }
+  75% { 
+  opacity: 75%;
+  background-color: orange;
+  }
+  100% {
+  opacity: 100%;
+  background-color: red;
+  }
+}
+
+.background-animation {
+  height: 500px;
+  width: 100vw;
+  animation: background 20s ;
+}
+
+info {
+  display: block;
+}
+
