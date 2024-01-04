@@ -72,3 +72,22 @@ info {
   display: block;
 }
 
+@media screen and (max-width: 1024px) {
+  .card {
+      flex-basis: 40%;
+      padding: 1.5vh;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .card {
+      flex-basis: 40%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  .card{
+      flex-basis: 90%;
+  }
+}
