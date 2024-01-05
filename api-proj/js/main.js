@@ -22,7 +22,7 @@ async function getData(URL) {
                     `
                     <div class="card">
                         <h2 class="description">${meme.name}</h2>
-                        <img class="image" src="${meme.url}" alt="${meme.name}" data-id="${meme.id}">
+                        <img class="image" src="${meme.url}" alt="${meme.name}" data-id="${meme.id}"> <br>
                         <button class="caption-button" data-id="${meme.id}">Caption It</button>
                     </div>
                     `
@@ -39,7 +39,7 @@ async function getData(URL) {
                     `
                     <div class="card">
                         <h2 class="description">${meme.name}</h2>
-                        <img class="image" src="${meme.url}" alt="${meme.name}" data-id="${meme.id}">
+                        <img class="image" src="${meme.url}" alt="${meme.name}" data-id="${meme.id}"> <br>
                         <button class="caption-button" data-id="${meme.id}">Caption It</button>
                     </div>
                     `
