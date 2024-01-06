@@ -113,7 +113,7 @@ async function captionImage(memeId, captions) {
 
         if (result.success) {
             console.log("Newly created image URL:", result.data.url);
-            window.open(result.data.url, '_blank');
+            window.location.href = result.data.url;
         }
 
     } catch (error) {
